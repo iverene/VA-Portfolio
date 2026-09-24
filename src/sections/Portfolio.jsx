@@ -15,7 +15,7 @@ export default function Portfolio() {
   }, []);
   const list = active === "All" ? portfolioProjects : portfolioProjects.filter((p) => p.category === active);
   return (
-    <Section id="portfolio" eyebrow="Portfolio" title="Evidence of organized work.">
+    <Section id="portfolio" eyebrow="04 / Portfolio" title="Evidence of organized work.">
       <PortfolioFilter active={active} onChange={setActive} counts={counts} />
       <div className="mt-6">
         <PortfolioGrid projects={list} onOpen={setOpen} />

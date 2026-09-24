@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
 :root {
-  --ink: #171717;
-  --charcoal: #404040;
-  --warm-white: #F7F6F2;
-  --paper: #FFFFFF;
-  --soft-gray: #E5E5E0;
-  --sage: #A8B5A2;
+  --ink: #0a0a0a;
+  --paper: #ffffff;
 }
 
 html { scroll-behavior: smooth; }
-body { background: var(--warm-white); color: var(--charcoal); }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
 
 /* Hide scrollbar while keeping the element scrollable (modal viewer) */
 .no-scrollbar {

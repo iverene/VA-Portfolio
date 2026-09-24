@@ -10,17 +10,17 @@ const PRINCIPLES = [
 
 export default function About() {
   return (
-    <Section id="about" eyebrow="About" title="Administrative support shaped by real organizational work.">
-      <div className="grid gap-8 md:grid-cols-[1fr_1.4fr]">
-        <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-6 text-sm text-[#404040]">
-          <p className="text-[11px] font-medium uppercase tracking-wider">Background</p>
+    <Section id="about" eyebrow="01 / About" title="Administrative support shaped by real organizational work.">
+      <div className="grid gap-4 md:grid-cols-[1fr_1.4fr]">
+        <div className="border-2 border-[#0a0a0a] bg-[#0a0a0a] p-6 text-sm text-[#ffffff]">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em]">Background</p>
           <p className="mt-2">Student organization Committee Chairperson on Records / secretary: meeting records, minutes, correspondence, file organization, coordination.</p>
         </div>
         <ul className="grid gap-4 sm:grid-cols-2">
           {PRINCIPLES.map(([t, d]) => (
-            <li key={t} className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
-              <p className="text-sm font-semibold text-[#171717]">{t}</p>
-              <p className="mt-2 text-sm text-[#404040]">{d}</p>
+            <li key={t} className="border-2 border-[#0a0a0a] bg-[#ffffff] p-5">
+              <p className="font-mono text-sm font-semibold text-[#0a0a0a]">{t}</p>
+              <p className="mt-2 text-sm text-[#0a0a0a]">{d}</p>
             </li>
           ))}
         </ul>
