@@ -3,6 +3,9 @@ import Section from "./components/layout/Section.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import Home from "./sections/Home.jsx";
 import About from "./sections/About.jsx";
+import Services from "./sections/Services.jsx";
+import Skills from "./sections/Skills.jsx";
+import Experience from "./sections/Experience.jsx";
 
 export default function App() {
   return (
@@ -11,10 +14,10 @@ export default function App() {
       <main>
         <Home />
         <About />
-        <Section id="services"><h2>Services</h2></Section>
-        <Section id="skills"><h2>Skills</h2></Section>
+        <Services />
+        <Skills />
         <Section id="portfolio"><h2>Portfolio</h2></Section>
-        <Section id="experience"><h2>Experience</h2></Section>
+        <Experience />
         <Section id="contact"><h2>Contact</h2></Section>
       </main>
       <Footer email="hello@example.com" />
