@@ -19,8 +19,8 @@ export default function PortfolioModal({ project, onClose }) {
   }, [onClose]);
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 sm:items-center sm:p-6" onClick={onClose} role="presentation">
-      <div role="dialog" aria-modal="true" aria-label={project.title} onClick={(e) => e.stopPropagation()}
-        className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-t-xl bg-[#F7F6F2] p-6 sm:rounded-xl md:p-8">
+      <div role="dialog" aria-modal="true" aria-label={project.title} onClick={(e) => e.stopPropagation()} data-lenis-prevent
+        className="no-scrollbar max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-t-xl bg-[#F7F6F2] p-6 sm:rounded-xl md:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-2">
             <Badge>{project.category}</Badge>
