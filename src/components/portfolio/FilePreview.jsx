@@ -11,20 +11,20 @@ function Placeholder({ title }) {
   );
 }
 
-function ZoomableImage({ src, alt, onZoom, className }) {
+function ZoomableImage({ src, alt, index, onZoom, className }) {
   return (
-    <button onClick={() => onZoom({ src, alt })} aria-label={`Expand image: ${alt}`} className="block w-full cursor-zoom-in">
+    <button onClick={() => onZoom(index)} aria-label={`Expand image: ${alt}`} className="block w-full cursor-zoom-in">
       <img src={src} alt={alt} loading="lazy" className={className} />
     </button>
   );
 }
 
-function Gallery({ title, images, onZoom, rounded }) {
+function Gallery({ title, images, offset, onZoom, rounded }) {
   if (images.length === 0) return null;
   return (
     <div className="mt-4 grid grid-cols-2 gap-3">
-      {images.map((src) => (
-        <ZoomableImage key={src} src={src} alt={`${title} additional preview`} onZoom={onZoom} className={`w-full ${rounded} border border-[#E5E5E0]`} />
+      {images.map((src, i) => (
+        <ZoomableImage key={src} src={src} alt={`${title} additional preview`} index={offset + i} onZoom={onZoom} className={`w-full ${rounded} border border-[#E5E5E0]`} />
       ))}
     </div>
   );
@@ -32,17 +32,24 @@ function Gallery({ title, images, onZoom, rounded }) {
 
 export default function FilePreview({ project }) {
   const gallery = project.gallery ?? [];
+  const images = [
+    ...(project.preview ? [{ src: project.preview, alt: `${project.title} preview` }] : []),
+    ...gallery.map((src) => ({ src, alt: `${project.title} additional preview` })),
+  ];
+  const previewIndex = project.preview ? 0 : -1;
   const [zoom, setZoom] = useState(null);
-  const viewer = zoom && <ImageLightbox src={zoom.src} alt={zoom.alt} onClose={() => setZoom(null)} />;
+  const viewer = zoom !== null && (
+    <ImageLightbox images={images} initialIndex={zoom} onClose={() => setZoom(null)} />
+  );
   if (project.type === "Google Sheets") {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} index={0} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
-        <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded" />
+        <Gallery title={project.title} images={gallery} offset={previewIndex + 1} onZoom={setZoom} rounded="rounded" />
         <div className="mt-4"><ExternalLink href={project.externalUrl}>Open Google Sheet</ExternalLink></div>
         {viewer}
       </div>
@@ -52,7 +59,7 @@ export default function FilePreview({ project }) {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} index={0} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
@@ -65,11 +72,11 @@ export default function FilePreview({ project }) {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} index={0} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
-        <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded" />
+        <Gallery title={project.title} images={gallery} offset={previewIndex + 1} onZoom={setZoom} rounded="rounded" />
         <a href={project.file} download className="mt-4 inline-block text-sm font-medium text-[#171717] underline underline-offset-4">Open File</a>
         {viewer}
       </div>
@@ -78,11 +85,11 @@ export default function FilePreview({ project }) {
   return (
     <div>
       {project.preview ? (
-        <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded-lg border border-[#E5E5E0]" />
+        <ZoomableImage src={project.preview} alt={`${project.title} preview`} index={0} onZoom={setZoom} className="w-full rounded-lg border border-[#E5E5E0]" />
       ) : (
         <Placeholder title={project.title} />
       )}
-      <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded-lg" />
+      <Gallery title={project.title} images={gallery} offset={previewIndex + 1} onZoom={setZoom} rounded="rounded-lg" />
       {viewer}
     </div>
   );
