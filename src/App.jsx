@@ -6,6 +6,7 @@ import About from "./sections/About.jsx";
 import Services from "./sections/Services.jsx";
 import Skills from "./sections/Skills.jsx";
 import Experience from "./sections/Experience.jsx";
+import Portfolio from "./sections/Portfolio.jsx";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <About />
         <Services />
         <Skills />
-        <Section id="portfolio"><h2>Portfolio</h2></Section>
+        <Portfolio />
         <Experience />
         <Section id="contact"><h2>Contact</h2></Section>
       </main>
