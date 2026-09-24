@@ -9,7 +9,7 @@ export default function Section({ id, eyebrow, title, lede, children }) {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.35, ease: "easeOut" }}
       >
-        {eyebrow && <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">{eyebrow}</p>}
+        {eyebrow && <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">{eyebrow}</p>}
         {title && <h2 className="mt-3 max-w-2xl font-serif text-2xl font-semibold leading-snug text-[#1a1a1a] md:text-[2rem]">{title}</h2>}
         {lede && <p className="mt-4 max-w-2xl leading-relaxed text-[#6b6b6b]">{lede}</p>}
         <div className="mt-8">{children}</div>

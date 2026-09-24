@@ -14,12 +14,12 @@ export default function About() {
       <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           <div className="border border-[#e3e1dc] bg-[#ffffff] p-6">
-            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Education</p>
+            <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Education</p>
             <p className="mt-3 font-serif text-lg font-semibold leading-snug text-[#1a1a1a]">BS Information Technology with Specialization Track in Business Analytics</p>
             <p className="mt-1 text-sm text-[#6b6b6b]">4th Year — Batangas State University TNEU</p>
           </div>
           <div className="border border-[#e3e1dc] bg-[#ffffff] p-6">
-            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Organizational Work</p>
+            <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Organizational Work</p>
             <p className="mt-3 font-serif text-lg font-semibold leading-snug text-[#1a1a1a]">Committee Chairperson on Records / Deputy Secretary General</p>
             <p className="mt-1 text-sm text-[#6b6b6b]">Student organization — meeting records, minutes, correspondence, file organization, coordination.</p>
           </div>

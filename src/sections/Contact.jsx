@@ -9,7 +9,7 @@ export default function Contact({ email, links = [] }) {
         <Button href={`mailto:${email}`}>Email Me</Button>
         {links.map(([label, href]) => <Button key={label} href={href} variant="secondary">{label}</Button>)}
       </div>
-      <p className="mt-4 font-mono text-sm text-[#1a1a1a]">{email}</p>
+      <p className="mt-4 text-sm text-[#1a1a1a]">{email}</p>
     </Section>
   );
 }

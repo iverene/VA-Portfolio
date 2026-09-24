@@ -5,7 +5,7 @@ import ImageLightbox from "./ImageLightbox.jsx";
 function Placeholder({ title }) {
   return (
     <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-2 border border-[#e3e1dc] bg-[#ffffff] p-6 text-center">
-      <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Document preview</p>
+      <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-[#6b6b6b]">Document preview</p>
       <p className="text-sm text-[#6b6b6b]">{title} — open the file below to view.</p>
     </div>
   );
@@ -63,7 +63,7 @@ export default function FilePreview({ project }) {
         ) : (
           <Placeholder title={project.title} />
         )}
-        <a href={project.file} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-mono text-xs font-medium uppercase tracking-[0.1em] text-[#1a1a1a] underline underline-offset-4">View PDF</a>
+        <a href={project.file} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-xs font-medium uppercase tracking-[0.1em] text-[#1a1a1a] underline underline-offset-4">View PDF</a>
         {viewer}
       </div>
     );
@@ -77,7 +77,7 @@ export default function FilePreview({ project }) {
           <Placeholder title={project.title} />
         )}
         <Gallery title={project.title} images={gallery} offset={previewIndex + 1} onZoom={setZoom} rounded="rounded-none" />
-        <a href={project.file} download className="mt-4 inline-block font-mono text-xs font-medium uppercase tracking-[0.1em] text-[#1a1a1a] underline underline-offset-4">Open File</a>
+        <a href={project.file} download className="mt-4 inline-block text-xs font-medium uppercase tracking-[0.1em] text-[#1a1a1a] underline underline-offset-4">Open File</a>
         {viewer}
       </div>
     );

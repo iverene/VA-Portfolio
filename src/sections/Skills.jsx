@@ -22,7 +22,7 @@ export default function Skills() {
       <div className="grid gap-px border border-[#e3e1dc] bg-[#e3e1dc] md:grid-cols-2">
         {skillGroups.map((g) => (
           <div key={g.title} className="bg-[#ffffff] p-6 md:p-8">
-            <h3 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">{g.title}</h3>
+            <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">{g.title}</h3>
             {g.title === "Tools" ? (
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                 {g.items.map((i) => {

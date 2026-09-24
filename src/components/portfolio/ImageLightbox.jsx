@@ -30,7 +30,7 @@ export default function ImageLightbox({ images, initialIndex = 0, onClose }) {
     <div data-lightbox-open className="fixed inset-0 z-[60] flex items-center justify-center bg-[#ffffff]/95 p-2 sm:p-6" onClick={onClose} role="presentation">
       <div className="flex max-h-[94vh] w-full max-w-6xl flex-col border border-[#e3e1dc] bg-[#ffffff] shadow-xl">
         <div className="flex items-center justify-between border-b border-[#e3e1dc] px-4 py-2.5">
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b6b6b]">
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#6b6b6b]">
             {total > 1 ? `${index + 1} / ${total}` : "Preview"}
           </p>
           <button ref={closeRef} onClick={onClose} aria-label="Close image viewer" className="p-1.5 text-[#6b6b6b] outline-none hover:text-[#1a1a1a]">
@@ -50,7 +50,7 @@ export default function ImageLightbox({ images, initialIndex = 0, onClose }) {
           )}
           <img src={current.src} alt={current.alt} onClick={(e) => e.stopPropagation()} className="max-h-[80vh] max-w-full rounded-none border border-[#e3e1dc] object-contain" />
         </div>
-        <p aria-live="polite" className="border-t border-[#e3e1dc] px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.1em] text-[#6b6b6b]">{current.alt}</p>
+        <p aria-live="polite" className="border-t border-[#e3e1dc] px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-[#6b6b6b]">{current.alt}</p>
       </div>
     </div>
   );
