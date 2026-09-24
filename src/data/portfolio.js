@@ -49,7 +49,7 @@ export const portfolioProjects = [
     outcome:
       "A clean proposal document that is easy to read, file, and reference.",
     skills: ["Documentation", "Administrative Coordination"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/01-event-proposal.pdf",
     preview: "/previews/records/01-event-proposal-images-0.png",
     gallery: [
@@ -75,7 +75,7 @@ export const portfolioProjects = [
     outcome:
       "Meeting outcomes are documented and easy to follow up on.",
     skills: ["Meeting Documentation", "Documentation"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/02-meeting-minutes.pdf",
     preview: "/previews/records/02-meeting-minutes-images-0.png",
     gallery: ["/previews/records/02-meeting-minutes-images-1.png"],
@@ -96,7 +96,7 @@ export const portfolioProjects = [
     outcome:
       "Correspondence that is clear, professional, and ready to file as a record.",
     skills: ["Documentation", "Business Correspondence"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/03-request-letter.pdf",
     preview: "/previews/records/03-request-letter.png",
     gallery: [],
@@ -117,7 +117,7 @@ export const portfolioProjects = [
     outcome:
       "A professional letter that communicates the necessary information without excess.",
     skills: ["Documentation", "Business Correspondence"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/04-excuse-letter.pdf",
     preview: "/previews/records/04-excuse-letter-images-0.png",
     gallery: ["/previews/records/04-excuse-letter-images-1.png"],
@@ -138,7 +138,7 @@ export const portfolioProjects = [
     outcome:
       "Internal information is communicated clearly and kept on record.",
     skills: ["Documentation", "Administrative Coordination"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/05-memorandum.pdf",
     preview: "/previews/records/05-memorandum.png",
     gallery: [],
@@ -159,7 +159,7 @@ export const portfolioProjects = [
     outcome:
       "A properly formatted record suitable for organizational filing.",
     skills: ["Documentation", "Records Management"],
-    tools: ["Google Docs"],
+    tools: ["Microsoft Word"],
     file: "/documents/records/06-resolution.pdf",
     preview: "/previews/records/06-resolution.png",
     gallery: [],
