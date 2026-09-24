@@ -113,13 +113,13 @@ export default function ProjectPage() {
         </div>
 
         <nav aria-label="More projects" className="mt-14 grid gap-px border border-[#e3e1dc] bg-[#e3e1dc] sm:grid-cols-2">
-          <Link to={`/project/${prev.id}`} className="bg-[#ffffff] p-5">
+          <Link to={`/project/${prev.id}`} className="bg-[#ffffff] p-4 md:p-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b6b6b]">← Previous</p>
-            <p className="mt-1 font-serif text-lg font-semibold leading-snug text-[#1a1a1a]">{prev.title}</p>
+            <p className="mt-1 font-serif text-base font-semibold leading-snug text-[#1a1a1a] md:text-lg">{prev.title}</p>
           </Link>
-          <Link to={`/project/${next.id}`} className="bg-[#ffffff] p-5 text-right">
+          <Link to={`/project/${next.id}`} className="bg-[#ffffff] p-4 text-right md:p-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b6b6b]">Next →</p>
-            <p className="mt-1 font-serif text-lg font-semibold leading-snug text-[#1a1a1a]">{next.title}</p>
+            <p className="mt-1 font-serif text-base font-semibold leading-snug text-[#1a1a1a] md:text-lg">{next.title}</p>
           </Link>
         </nav>
       </main>
