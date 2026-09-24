@@ -184,6 +184,11 @@ export const portfolioProjects = [
     preview: "/previews/spreadsheet/client-database.png",
     gallery: [],
     file: "/documents/spreadsheet/01-client-database-data-cleaning.xlsx",
+    formulas: [
+      { expression: "=PROPER(TRIM(B2))", use: "Standardizes names to proper case and strips extra spaces" },
+      { expression: "Remove Duplicates", use: "Eliminates repeated contact records" },
+      { expression: "Data Validation lists", use: "Status (Active / Inactive / Prospect) and Source (Online / Referral / Website / Facebook) dropdowns" },
+    ],
     status: "Practice Project",
   },
   {
@@ -203,6 +208,14 @@ export const portfolioProjects = [
     preview: "/previews/spreadsheet/expense-tracker.png",
     gallery: [],
     file: "/documents/spreadsheet/02-expense-tracker-basic-formulas.xlsx",
+    formulas: [
+      { expression: "=SUM(D12:D31)", use: "Totals all recorded expenses" },
+      { expression: "=AVERAGE(D12:D31)", use: "Computes average spend per entry" },
+      { expression: "=COUNT(D12:D31)", use: "Counts numeric expense entries" },
+      { expression: "=COUNTA(C12:C31)", use: "Counts non-empty description cells" },
+      { expression: "=MIN(D12:D31) / =MAX(D12:D31)", use: "Finds smallest and largest expenses" },
+      { expression: "Data Validation lists", use: "Category (Food / Transportation / School / Bills / Personal / Entertainment) and Needs / Wants dropdowns" },
+    ],
     status: "Practice Project",
   },
   {
@@ -223,6 +236,13 @@ export const portfolioProjects = [
     gallery: ["/previews/spreadsheet/invoice-tracker-02.png"],
     externalUrl:
       "https://docs.google.com/spreadsheets/d/15Vs8ZGWnmLQiKGO-r_GX_qAhgmzC07dUecEtI1C_qOc/edit?usp=sharing",
+    formulas: [
+      { expression: "=XLOOKUP(C2,'Client List'!A:A,'Client List'!B:B,\"Not Found\")", use: "Pulls client details from the Client List sheet with a fallback value" },
+      { expression: "=IF(H4=0,\"Unpaid\",IF(H4<G4,\"Partial\",\"Paid\"))", use: "Nested IF derives payment status from amount paid versus amount due" },
+      { expression: "Conditional Formatting", use: "Highlights invoices by payment status" },
+      { expression: "=SUM", use: "Totals invoiced and collected amounts" },
+      { expression: "=COUNTIF / =SUMIF", use: "Counts and sums invoices per payment status" },
+    ],
     status: "Practice Project",
   },
   {
@@ -242,6 +262,14 @@ export const portfolioProjects = [
     preview: "/previews/spreadsheet/follow-up-tracker-01.png",
     gallery: ["/previews/spreadsheet/follow-up-tracker-02.png"],
     file: "/documents/spreadsheet/04-client-follow-up-tracker-lookup-and-conditional-formatting.xlsx",
+    formulas: [
+      { expression: "=XLOOKUP(B2,'Client List'!A:A,'Client List'!B:B,\"Not Found\")", use: "Pulls client details from the Client List sheet with a fallback value" },
+      { expression: "=IF(D2=\"Pending\",\"High\",IF(D2=\"No Response\",\"Medium\",\"Low\"))", use: "Nested IF assigns follow-up priority from status" },
+      { expression: "=COUNTIF(D2:D21,\"Pending\")", use: "Counts follow-ups by status" },
+      { expression: "=SUMIF(D2:D21,\"Pending\",E2:E21)", use: "Sums values for pending follow-ups only" },
+      { expression: "Conditional Formatting", use: "Highlights rows by status (Pending / No Response / Completed) and overdue dates against TODAY()" },
+      { expression: "Data Validation lists", use: "Method (Call / Email) and Status dropdowns" },
+    ],
     status: "Practice Project",
   },
   {
@@ -262,6 +290,12 @@ export const portfolioProjects = [
     gallery: ["/previews/spreadsheet/lead-tracker-02.png"],
     externalUrl:
       "https://docs.google.com/spreadsheets/d/1lI-GKh2UGVZBcXhz4H172PVfN8s7KQYZlFAZswrB6Fs/edit?usp=sharing",
+    formulas: [
+      { expression: "=XLOOKUP(E2,'Lead Sources'!A:A,'Lead Sources'!B:B,\"Not Found\")", use: "Pulls lead source details from the Lead Sources sheet with a fallback value" },
+      { expression: "=IF(J3=\"\", \"No Follow-Up\", IF(J3<TODAY(),\"Overdue\",\"Upcoming\"))", use: "Nested IF flags each lead's follow-up state against today's date" },
+      { expression: "Conditional Formatting", use: "Highlights leads by follow-up status" },
+      { expression: "=COUNTIF / =SUMIF", use: "Counts and sums leads per status" },
+    ],
     status: "Practice Project",
   },
   {
@@ -281,6 +315,13 @@ export const portfolioProjects = [
     preview: "/previews/spreadsheet/dashboard-01.png",
     gallery: ["/previews/spreadsheet/dashboard-02.png"],
     file: "/documents/spreadsheet/06-survey-dashboard.xlsm",
+    formulas: [
+      { expression: "=IF(ISNUMBER(SEARCH(\"Facebook\",E2)),1,0)", use: "Parses multi-select answers into binary flags per platform" },
+      { expression: "=COUNTIF('Data Layer'!I:I,\"1\")", use: "Aggregates flagged responses per category" },
+      { expression: "=AVERAGE('Data Layer'!T:T)", use: "Averages survey scores in the analysis layer" },
+      { expression: "Layered architecture", use: "Raw Data → Data Layer → Analysis Layer → Visualization Layer keeps logic auditable" },
+      { expression: "Conditional Formatting", use: "Color-codes average scores below 3, between 3–3.9, and 4+" },
+    ],
     status: "Practice Project",
   },
 
