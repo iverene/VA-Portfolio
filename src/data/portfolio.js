@@ -409,6 +409,28 @@ export const portfolioProjects = [
     ],
     status: "Practice Project",
   },
+  {
+    id: "clickup-task-management",
+    title: "Project & Task Management in ClickUp",
+    category: "Calendar Management",
+    type: "PNG",
+    description:
+      "A sample ClickUp workspace showing organized task lists, deadlines, and priorities for administrative work.",
+    objective:
+      "Demonstrate task tracking where assignments, deadlines, and priorities stay visible in one place.",
+    process:
+      "Organized tasks into lists, set priorities and due dates, and tracked progress through the workspace.",
+    outcome: "Tasks and deadlines stay tracked so work moves forward without slipping.",
+    skills: ["Task Management", "Deadline Tracking", "Project Coordination"],
+    tools: ["ClickUp"],
+    preview: "/previews/task-management/task-management-01.png",
+    gallery: [
+      "/previews/task-management/task-management-02.png",
+      "/previews/task-management/task-management-03.png",
+      "/previews/task-management/task-management-04.png",
+    ],
+    status: "Practice Project",
+  },
 
   // ---- Business Communications Management (5) ----
   {
