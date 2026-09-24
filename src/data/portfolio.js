@@ -32,6 +32,7 @@ export const portfolioProjects = [
       "/previews/file-organization/file-organization-06.png",
       "/previews/file-organization/file-organization-07.png",
     ],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -57,6 +58,7 @@ export const portfolioProjects = [
       "/previews/records/01-event-proposal-images-3.png",
       "/previews/records/01-event-proposal-images-4.png",
     ],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -77,6 +79,7 @@ export const portfolioProjects = [
     file: "/documents/records/02-meeting-minutes.pdf",
     preview: "/previews/records/02-meeting-minutes-images-0.png",
     gallery: ["/previews/records/02-meeting-minutes-images-1.png"],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -97,6 +100,7 @@ export const portfolioProjects = [
     file: "/documents/records/03-request-letter.pdf",
     preview: "/previews/records/03-request-letter.png",
     gallery: [],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -117,6 +121,7 @@ export const portfolioProjects = [
     file: "/documents/records/04-excuse-letter.pdf",
     preview: "/previews/records/04-excuse-letter-images-0.png",
     gallery: ["/previews/records/04-excuse-letter-images-1.png"],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -137,6 +142,7 @@ export const portfolioProjects = [
     file: "/documents/records/05-memorandum.pdf",
     preview: "/previews/records/05-memorandum.png",
     gallery: [],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
   {
@@ -157,6 +163,7 @@ export const portfolioProjects = [
     file: "/documents/records/06-resolution.pdf",
     preview: "/previews/records/06-resolution.png",
     gallery: [],
+    note: "Referenced from actual documents prepared for a student organization. Names and sensitive details have been redacted for privacy.",
     status: "Practice Project",
   },
 

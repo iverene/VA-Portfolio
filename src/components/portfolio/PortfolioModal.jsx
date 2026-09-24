@@ -33,6 +33,12 @@ export default function PortfolioModal({ project, onClose }) {
         </div>
         <div className="mt-6 space-y-6">
           <section><h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Overview</h4><p className="mt-2 text-sm leading-relaxed text-[#1a1a1a]">{project.description}</p></section>
+          {project.note && (
+            <section className="border border-dashed border-[#6b6b6b] p-4">
+              <h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Source Note</h4>
+              <p className="mt-2 text-sm leading-relaxed text-[#1a1a1a]">{project.note}</p>
+            </section>
+          )}
           <section><h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Objective</h4><p className="mt-2 text-sm leading-relaxed text-[#1a1a1a]">{project.objective}</p></section>
           <section><h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Process</h4><p className="mt-2 text-sm leading-relaxed text-[#1a1a1a]">{project.process}</p></section>
           <section><h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Deliverables</h4><div className="mt-2"><FilePreview project={project} /></div></section>
