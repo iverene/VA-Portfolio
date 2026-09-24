@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b-2 border-[#0a0a0a] bg-[#ffffff]">
       <nav aria-label="Primary" className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-3">
-        <a href="#home" className="font-mono text-sm font-semibold uppercase tracking-[0.15em] text-[#0a0a0a]">Iverene Causapin</a>
+        <a href="#home" className="font-mono text-sm font-semibold uppercase tracking-[0.15em] text-[#0a0a0a]">Iverene Grace Causapin</a>
         <button className="border-2 border-[#0a0a0a] p-1.5 text-[#0a0a0a] md:hidden" aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((v) => !v)}>
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
