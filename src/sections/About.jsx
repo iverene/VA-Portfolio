@@ -12,9 +12,20 @@ export default function About() {
   return (
     <Section id="about" eyebrow="01 / About" title="Administrative support shaped by real organizational work.">
       <div className="grid gap-4 md:grid-cols-[1fr_1.4fr]">
-        <div className="border-2 border-[#0a0a0a] bg-[#0a0a0a] p-6 text-sm text-[#ffffff]">
-          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em]">Background</p>
-          <p className="mt-2">Student organization Committee Chairperson on Records / secretary: meeting records, minutes, correspondence, file organization, coordination.</p>
+        <div className="border-2 border-[#0a0a0a] bg-[#0a0a0a] text-[#ffffff]">
+          <p className="border-b-2 border-[#ffffff] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-[0.2em]">Background</p>
+          <div className="space-y-5 p-6 text-sm">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#ffffff]/70">Education</p>
+              <p className="mt-1 font-medium">BS Information Technology, Business Analytics track</p>
+              <p className="text-[#ffffff]/70">4th Year — Batangas State University TNEU</p>
+            </div>
+            <div className="border-t border-[#ffffff]/30 pt-5">
+              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#ffffff]/70">Organizational Work</p>
+              <p className="mt-1 font-medium">Committee Chairperson on Records / Deputy Secretary General</p>
+              <p className="text-[#ffffff]/70">Student organization — meeting records, minutes, correspondence, file organization, coordination.</p>
+            </div>
+          </div>
         </div>
         <ul className="grid gap-4 sm:grid-cols-2">
           {PRINCIPLES.map(([t, d]) => (

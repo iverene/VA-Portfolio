@@ -1,4 +1,4 @@
 export const experience = [
-  { period: "2025 — Present", role: "Committee Chairperson on Records / Secretary", org: "Student Organization", bullets: ["Records management", "Meeting documentation & minutes", "Administrative correspondence", "File organization", "Coordination"] },
-  { period: "2024 — 2025", role: "Project Coordination & Documentation", org: "Academic / WaterWise Project", bullets: ["Task management", "Documentation", "Team workflows", "Testing support", "Deadline management"] },
+  { period: "2025 — 2026", role: "Committee Chairperson on Records", org: "Supreme Student Council", bullets: ["Records management", "Meeting documentation & minutes", "Administrative correspondence", "File organization", "Coordination"] },
+  { period: "2025 — 2026", role: "Deputy Secretary General", org: "College of Informatics and Computing Sciences", bullets: ["Meeting minutes & documentation", "Official correspondence", "Records & file maintenance", "Schedule & meeting coordination", "Document preparation & distribution"] },
 ];
