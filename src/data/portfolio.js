@@ -50,6 +50,13 @@ export const portfolioProjects = [
     skills: ["Documentation", "Administrative Coordination"],
     tools: ["Google Docs"],
     file: "/documents/records/01-event-proposal.pdf",
+    preview: "/previews/records/01-event-proposal-images-0.png",
+    gallery: [
+      "/previews/records/01-event-proposal-images-1.png",
+      "/previews/records/01-event-proposal-images-2.png",
+      "/previews/records/01-event-proposal-images-3.png",
+      "/previews/records/01-event-proposal-images-4.png",
+    ],
     status: "Practice Project",
   },
   {
@@ -68,6 +75,8 @@ export const portfolioProjects = [
     skills: ["Meeting Documentation", "Documentation"],
     tools: ["Google Docs"],
     file: "/documents/records/02-meeting-minutes.pdf",
+    preview: "/previews/records/02-meeting-minutes-images-0.png",
+    gallery: ["/previews/records/02-meeting-minutes-images-1.png"],
     status: "Practice Project",
   },
   {
@@ -86,6 +95,8 @@ export const portfolioProjects = [
     skills: ["Documentation", "Business Correspondence"],
     tools: ["Google Docs"],
     file: "/documents/records/03-request-letter.pdf",
+    preview: "/previews/records/03-request-letter.png",
+    gallery: [],
     status: "Practice Project",
   },
   {
@@ -104,6 +115,8 @@ export const portfolioProjects = [
     skills: ["Documentation", "Business Correspondence"],
     tools: ["Google Docs"],
     file: "/documents/records/04-excuse-letter.pdf",
+    preview: "/previews/records/04-excuse-letter-images-0.png",
+    gallery: ["/previews/records/04-excuse-letter-images-1.png"],
     status: "Practice Project",
   },
   {
@@ -122,6 +135,8 @@ export const portfolioProjects = [
     skills: ["Documentation", "Administrative Coordination"],
     tools: ["Google Docs"],
     file: "/documents/records/05-memorandum.pdf",
+    preview: "/previews/records/05-memorandum.png",
+    gallery: [],
     status: "Practice Project",
   },
   {
@@ -140,6 +155,8 @@ export const portfolioProjects = [
     skills: ["Documentation", "Records Management"],
     tools: ["Google Docs"],
     file: "/documents/records/06-resolution.pdf",
+    preview: "/previews/records/06-resolution.png",
+    gallery: [],
     status: "Practice Project",
   },
 
@@ -474,6 +491,14 @@ export const portfolioProjects = [
     skills: ["Business Correspondence", "Documentation"],
     tools: ["Canva"],
     file: "/documents/business-communications/02-company-presentation.pdf",
+    preview: "/previews/business-communications/02-company-presentation-01.png",
+    gallery: [
+      "/previews/business-communications/02-company-presentation-02.png",
+      "/previews/business-communications/02-company-presentation-03.png",
+      "/previews/business-communications/02-company-presentation-04.png",
+      "/previews/business-communications/02-company-presentation-05.png",
+      "/previews/business-communications/02-company-presentation-06.png",
+    ],
     status: "Practice Project",
   },
 ];
