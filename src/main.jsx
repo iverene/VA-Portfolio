@@ -1,15 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { MotionConfig } from "motion/react";
-import Lenis from "lenis";
+import { initLenis } from "./lib/lenis.js";
 import './index.css'
 import App from './App.jsx'
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const lenis = new Lenis({ duration: 1.1 });
-  const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
-  requestAnimationFrame(raf);
-}
+initLenis();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

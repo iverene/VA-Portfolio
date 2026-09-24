@@ -5,6 +5,7 @@ import Metadata from "../components/shared/Metadata.jsx";
 import FilePreview from "../components/portfolio/FilePreview.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import { portfolioProjects } from "../data/portfolio.js";
+import { scrollToTopInstant } from "../lib/lenis.js";
 
 export default function ProjectPage() {
   const { id } = useParams();
@@ -12,7 +13,7 @@ export default function ProjectPage() {
   const project = portfolioProjects[index];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTopInstant();
   }, [id]);
 
   useEffect(() => {
