@@ -7,6 +7,7 @@ import About from "./sections/About.jsx";
 import Services from "./sections/Services.jsx";
 import Skills from "./sections/Skills.jsx";
 import Experience from "./sections/Experience.jsx";
+import Certifications from "./sections/Certifications.jsx";
 import Portfolio from "./sections/Portfolio.jsx";
 import Contact from "./sections/Contact.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
@@ -33,6 +34,7 @@ function HomePage() {
         <Skills />
         <Portfolio />
         <Experience />
+        <Certifications />
         <Contact email="hello@example.com" links={[]} />
       </main>
       <Footer email="hello@example.com" />

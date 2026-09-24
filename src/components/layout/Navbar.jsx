@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const LINKS = [
   ["home", "Home"], ["about", "About"], ["services", "Services"],
-  ["skills", "Skills"], ["portfolio", "Portfolio"], ["experience", "Experience"], ["contact", "Contact"],
+  ["skills", "Skills"], ["portfolio", "Portfolio"], ["experience", "Experience"], ["certifications", "Certifications"], ["contact", "Contact"],
 ];
 
 export default function Navbar() {
