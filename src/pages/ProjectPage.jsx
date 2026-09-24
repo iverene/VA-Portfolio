@@ -81,10 +81,6 @@ export default function ProjectPage() {
               <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Process</h2>
               <p className="mt-3 leading-relaxed text-[#1a1a1a]">{project.process}</p>
             </section>
-          <section className="border-t border-[#e3e1dc] pt-8">
-            <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Deliverables</h2>
-            <div className="mt-4"><FilePreview project={project} /></div>
-          </section>
           {project.formulas && project.formulas.length > 0 && (
             <section className="border-t border-[#e3e1dc] pt-8">
               <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Formulas & Concepts</h2>
@@ -98,6 +94,10 @@ export default function ProjectPage() {
               </ul>
             </section>
           )}
+            <section className="border-t border-[#e3e1dc] pt-8">
+              <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Skills Demonstrated</h2>
+              <div className="mt-4"><Metadata items={project.skills.map((s) => ["Skill", s])} /></div>
+            </section>
             <section className="border-t border-[#e3e1dc] pt-8">
               <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#6b6b6b]">Outcome</h2>
               <p className="mt-3 font-serif text-xl leading-relaxed text-[#1a1a1a]">{project.outcome}</p>
