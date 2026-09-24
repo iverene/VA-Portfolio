@@ -3,11 +3,14 @@
 @theme {
   --font-sans: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
 :root {
-  --ink: #0a0a0a;
+  --ink: #1a1a1a;
   --paper: #ffffff;
+  --hairline: #e3e1dc;
+  --muted: #6b6b6b;
 }
 
 html { scroll-behavior: smooth; }

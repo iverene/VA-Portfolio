@@ -14,11 +14,13 @@ export default function Portfolio() {
     return m;
   }, []);
   const list = active === "All" ? portfolioProjects : portfolioProjects.filter((p) => p.category === active);
+  const blanksMd = (2 - (list.length % 2)) % 2;
+  const blanksLg = (3 - (list.length % 3)) % 3;
   return (
     <Section id="portfolio" eyebrow="04 / Portfolio" title="Evidence of organized work.">
       <PortfolioFilter active={active} onChange={setActive} counts={counts} />
       <div className="mt-6">
-        <PortfolioGrid projects={list} onOpen={setOpen} />
+        <PortfolioGrid projects={list} onOpen={setOpen} blanksMd={blanksMd} blanksLg={blanksLg} />
       </div>
       {open && <PortfolioModal project={open} onClose={() => setOpen(null)} />}
     </Section>
