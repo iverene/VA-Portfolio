@@ -217,7 +217,7 @@ export const portfolioProjects = [
     tools: ["Microsoft Excel"],
     preview: "/previews/spreadsheet/follow-up-tracker-01.png",
     gallery: ["/previews/spreadsheet/follow-up-tracker-02.png"],
-    file: "/documents/spreadsheet/04-client-follow-up-tracker-lookup-&-conditional-formatting.xlsx",
+    file: "/documents/spreadsheet/04-client-follow-up-tracker-lookup-and-conditional-formatting.xlsx",
     status: "Practice Project",
   },
   {
