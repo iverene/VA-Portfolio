@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #171717;
+  --charcoal: #404040;
+  --warm-white: #F7F6F2;
+  --paper: #FFFFFF;
+  --soft-gray: #E5E5E0;
+  --sage: #A8B5A2;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--warm-white); color: var(--charcoal); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
