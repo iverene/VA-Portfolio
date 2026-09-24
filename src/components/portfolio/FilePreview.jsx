@@ -1,4 +1,6 @@
+import { useState } from "react";
 import ExternalLink from "../ui/ExternalLink.jsx";
+import ImageLightbox from "./ImageLightbox.jsx";
 
 function Placeholder({ title }) {
   return (
@@ -9,24 +11,40 @@ function Placeholder({ title }) {
   );
 }
 
+function ZoomableImage({ src, alt, onZoom, className }) {
+  return (
+    <button onClick={() => onZoom({ src, alt })} aria-label={`Expand image: ${alt}`} className="block w-full cursor-zoom-in">
+      <img src={src} alt={alt} loading="lazy" className={className} />
+    </button>
+  );
+}
+
+function Gallery({ title, images, onZoom, rounded }) {
+  if (images.length === 0) return null;
+  return (
+    <div className="mt-4 grid grid-cols-2 gap-3">
+      {images.map((src) => (
+        <ZoomableImage key={src} src={src} alt={`${title} additional preview`} onZoom={onZoom} className={`w-full ${rounded} border border-[#E5E5E0]`} />
+      ))}
+    </div>
+  );
+}
+
 export default function FilePreview({ project }) {
   const gallery = project.gallery ?? [];
+  const [zoom, setZoom] = useState(null);
+  const viewer = zoom && <ImageLightbox src={zoom.src} alt={zoom.alt} onClose={() => setZoom(null)} />;
   if (project.type === "Google Sheets") {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <img src={project.preview} alt={`${project.title} preview`} loading="lazy" className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
-        {gallery.length > 0 && (
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            {gallery.map((src) => (
-              <img key={src} src={src} alt={`${project.title} additional preview`} loading="lazy" className="w-full rounded border border-[#E5E5E0]" />
-            ))}
-          </div>
-        )}
+        <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded" />
         <div className="mt-4"><ExternalLink href={project.externalUrl}>Open Google Sheet</ExternalLink></div>
+        {viewer}
       </div>
     );
   }
@@ -34,11 +52,12 @@ export default function FilePreview({ project }) {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <img src={project.preview} alt={`${project.title} preview`} loading="lazy" className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
         <a href={project.file} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm font-medium text-[#171717] underline underline-offset-4">View PDF</a>
+        {viewer}
       </div>
     );
   }
@@ -46,35 +65,25 @@ export default function FilePreview({ project }) {
     return (
       <div className="rounded-lg border border-[#E5E5E0] bg-[#FFFFFF] p-5">
         {project.preview ? (
-          <img src={project.preview} alt={`${project.title} preview`} loading="lazy" className="w-full rounded border border-[#E5E5E0]" />
+          <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded border border-[#E5E5E0]" />
         ) : (
           <Placeholder title={project.title} />
         )}
-        {gallery.length > 0 && (
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            {gallery.map((src) => (
-              <img key={src} src={src} alt={`${project.title} additional preview`} loading="lazy" className="w-full rounded border border-[#E5E5E0]" />
-            ))}
-          </div>
-        )}
+        <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded" />
         <a href={project.file} download className="mt-4 inline-block text-sm font-medium text-[#171717] underline underline-offset-4">Open File</a>
+        {viewer}
       </div>
     );
   }
   return (
     <div>
       {project.preview ? (
-        <img src={project.preview} alt={`${project.title} preview`} loading="lazy" className="w-full rounded-lg border border-[#E5E5E0]" />
+        <ZoomableImage src={project.preview} alt={`${project.title} preview`} onZoom={setZoom} className="w-full rounded-lg border border-[#E5E5E0]" />
       ) : (
         <Placeholder title={project.title} />
       )}
-      {gallery.length > 0 && (
-        <div className="mt-4 grid grid-cols-2 gap-3">
-          {gallery.map((src) => (
-            <img key={src} src={src} alt={`${project.title} additional preview`} loading="lazy" className="w-full rounded-lg border border-[#E5E5E0]" />
-          ))}
-        </div>
-      )}
+      <Gallery title={project.title} images={gallery} onZoom={setZoom} rounded="rounded-lg" />
+      {viewer}
     </div>
   );
 }
