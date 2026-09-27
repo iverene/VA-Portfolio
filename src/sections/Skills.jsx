@@ -1,5 +1,5 @@
 import Section from "../components/layout/Section.jsx";
-import { Mail, FolderOpen, FileText, Table, CalendarDays, FileSpreadsheet, FileType, ListChecks, Palette, Bot, Sparkles } from "lucide-react";
+import { Mail, FolderOpen, FileText, Table, CalendarDays, Video, FileSpreadsheet, FileType, ListChecks, Palette, Bot, Sparkles } from "lucide-react";
 import { skillGroups } from "../data/skills.js";
 
 const TOOL_ICONS = {
@@ -8,6 +8,7 @@ const TOOL_ICONS = {
   "Google Docs": FileText,
   "Google Sheets": Table,
   "Google Calendar": CalendarDays,
+  "Google Meet": Video,
   "Microsoft Excel": FileSpreadsheet,
   "Microsoft Word": FileType,
   "ClickUp": ListChecks,

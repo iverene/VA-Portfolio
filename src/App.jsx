@@ -35,9 +35,9 @@ function HomePage() {
         <Portfolio />
         <Experience />
         <Certifications />
-        <Contact email="hello@example.com" links={[]} />
+        <Contact email="iverenegrace.causapin@gmail.com" links={[]} />
       </main>
-      <Footer email="hello@example.com" />
+      <Footer email="iverenegrace.causapin@gmail.com" />
     </>
   );
 }

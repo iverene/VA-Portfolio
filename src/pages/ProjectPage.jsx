@@ -36,7 +36,7 @@ export default function ProjectPage() {
           <p className="mt-4 text-sm text-[#6b6b6b]">The project you are looking for does not exist.</p>
           <Link to="/#portfolio" className="mt-6 inline-block text-xs uppercase tracking-[0.15em] text-[#1a1a1a] underline underline-offset-4">← Back to Portfolio</Link>
         </main>
-        <Footer email="hello@example.com" />
+        <Footer email="iverenegrace.causapin@gmail.com" />
       </>
     );
   }
@@ -123,7 +123,7 @@ export default function ProjectPage() {
           </Link>
         </nav>
       </main>
-      <Footer email="hello@example.com" />
+      <Footer email="iverenegrace.causapin@gmail.com" />
     </>
   );
 }
