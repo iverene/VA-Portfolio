@@ -27,7 +27,7 @@ export default function Home() {
           <motion.div variants={rise} className="mt-8 flex flex-wrap gap-3">
             <Button href="#portfolio" variant="primary">View Portfolio</Button>
             <Button href="#contact" variant="secondary">Get in Touch</Button>
-            <Button href="/documents/Resume - Iverene Grace M. Causapin.pdf" variant="secondary"><Download size={15} aria-hidden="true" className="mr-2" />Download Resume</Button>
+            <Button href="/documents/Resume%20-%20Iverene%20Grace%20M.%20Causapin.pdf" download="Resume - Iverene Grace M. Causapin.pdf" variant="secondary"><Download size={15} aria-hidden="true" className="mr-2" />Download Resume</Button>
           </motion.div>
         </div>
         <motion.figure variants={rise} className="border border-[#e3e1dc] bg-[#ffffff] p-4">
